@@ -18,7 +18,7 @@ interface UserType {
   
   export interface SidebarInfo {
     strengths: Strength[]
-    skills: Skill[]
+    skills: Skills
     achivments: Achivment[]
     industry_experties: IndustryExperty[]
     languages: Language[]
@@ -32,14 +32,33 @@ interface UserType {
     icon: string
   }
   
-  export interface Skill {
-    id:number
-    groupName: string
-    groupList: GroupList[]
+  export interface Skills {
+    frontend: Frontend[]
+    backend: Backend[]
+    dataEngineering: DataEngineering[]
+    others: Other[]
   }
   
-  export interface GroupList {
-    id: number
+  export interface Frontend {
+    id: string
+    name: string
+    icon: string
+  }
+  
+  export interface Backend {
+    id: string
+    name: string
+    icon: string
+  }
+  
+  export interface DataEngineering {
+    id: string
+    name: string
+    icon: string
+  }
+  
+  export interface Other {
+    id: string
     name: string
     icon: string
   }
@@ -58,7 +77,7 @@ interface UserType {
   }
   
   export interface Language {
-    id: number
+    id: string
     name: string
   }
   

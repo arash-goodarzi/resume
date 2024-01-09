@@ -51,13 +51,14 @@ const Aside = async() => {
         <div className=" py-3">
             <div className="title-head">SKILLS</div>
             <div className="flex flex-col mx-3 my-5 gap-5">
+                {/* Frontend */}
                 {
-                    user.sidebarInfo.skills.map((skill,index)=>(
-                        <div key={skill.id} className="flex flex-col mx-3">
-                            <div className="title-subject">{skill.groupName}</div>
+                    // user.sidebarInfo.skills.map((skill,index)=>(
+                        <div className="flex flex-col mx-3">
+                            <div className="title-subject">Frontend</div>
                             <div className="flex flex-row gap-2 mx-3 flex-wrap">
                                 {
-                                    skill.groupList.map((item,index)=>(
+                                    user.sidebarInfo.skills.frontend.map((item,index)=>(
                                         <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
                                             <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
                                             <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
@@ -66,7 +67,7 @@ const Aside = async() => {
                                 }
                             </div>
                         </div>
-                    ))
+                    
                 }
             </div>
         </div>
