@@ -1,7 +1,6 @@
-import _ from 'lodash';
-require 
 
-export const getUserData = _.memoize(async (username:string) => {
+
+export const getUserData = async (username:string) => {
   try {
     const res = await fetch(`https://resume-api-rho.vercel.app/v1/generalinfo?name=${username}`);
     const data = await res.json();
@@ -12,4 +11,4 @@ export const getUserData = _.memoize(async (username:string) => {
     return null;
   }
 
-});
+};
