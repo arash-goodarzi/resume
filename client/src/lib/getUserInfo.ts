@@ -1,4 +1,4 @@
-const _ = require('lodash');
+import _ from 'lodash';
 require 
 
 export const getUserData = _.memoize(async (username:string) => {
