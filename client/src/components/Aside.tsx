@@ -24,7 +24,7 @@ const Aside = async() => {
 
     const userInfo:Promise<UserType> =  getUserData('arashgoodarzi');
     const user = await userInfo
-    console.log({user})
+    // console.log({user})
   return (
     <aside className='sm:w-1/4 font-mono pr-3'>
         {/* STRENGTHS */}
@@ -53,21 +53,70 @@ const Aside = async() => {
             <div className="flex flex-col mx-3 my-5 gap-5">
                 {/* Frontend */}
                 {
-                    // user.sidebarInfo.skills.map((skill,index)=>(
-                        <div className="flex flex-col mx-3">
-                            <div className="title-subject">Frontend</div>
-                            <div className="flex flex-row gap-2 mx-3 flex-wrap">
-                                {
-                                    user.sidebarInfo.skills.frontend.map((item,index)=>(
-                                        <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
-                                            <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
-                                            <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
-                                        </div>
-                                    ))
-                                }
-                            </div>
+                    <div className="flex flex-col mx-3">
+                        <div className="title-subject">Frontend</div>
+                        <div className="flex flex-row gap-2 mx-3 flex-wrap">
+                            {
+                                user.sidebarInfo.skills.frontend.map((item,index)=>(
+                                    <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
+                                        <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
+                                        <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
+                                    </div>
+                                ))
+                            }
                         </div>
-                    
+                    </div>
+                }
+
+                {/* Backend */}
+                {
+                    <div className="flex flex-col mx-3">
+                        <div className="title-subject">Backend</div>
+                        <div className="flex flex-row gap-2 mx-3 flex-wrap">
+                            {
+                                user.sidebarInfo.skills.backend.map((item,index)=>(
+                                    <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
+                                        <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
+                                        <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                }
+
+                {/* DataEngineering */}
+                {
+                    <div className="flex flex-col mx-3">
+                        <div className="title-subject">DataEngineering</div>
+                        <div className="flex flex-row gap-2 mx-3 flex-wrap">
+                            {
+                                user.sidebarInfo.skills.dataEngineering.map((item,index)=>(
+                                    <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
+                                        <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
+                                        <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                }
+
+                {/* Others */}
+                {
+                    <div className="flex flex-col mx-3">
+                        <div className="title-subject">Others</div>
+                        <div className="flex flex-row gap-2 mx-3 flex-wrap">
+                            {
+                                user.sidebarInfo.skills.others.map((item,index)=>(
+                                    <div key={item.id} className="group relative flex justify-center items-center cursor-pointer">
+                                        <p key={item.id} className='title-detail border-b-[1px] border-neutral'>{item.name}</p>
+                                        <div className='absolute icon-style' dangerouslySetInnerHTML={{ __html: item.icon }} />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
                 }
             </div>
         </div>
