@@ -29,15 +29,15 @@ const Section = async() => {
                 <div key={item.id} className="px-2">
                   <h2 className='title-subject-main'>{item.title}</h2>
                   <div className="flex flex-row justify-between">
-                    <h3 className=' text-primaryTooStrong md:text-xl text-base font-bold'>{item.company}</h3>
+                    <h3 className=' text-primaryTooStrong xl:text-2xl xl:mt-1 md:text-xl text-base font-bold'>{item.company}</h3>
                     <div className="flex flex-row items-center">
-                      <div className="flex flex-row items-center text-xs"><CalendarDays size={12} color='gray' className='mr-1' />{item.date}</div>
+                      <div className="flex flex-row items-center md:text-base text-xs"><CalendarDays size={12} color='gray' className='mr-1' />{item.date}</div>
                       <div className="flex items-center text-xs ml-6"><Link href="https://www.google.com/maps/place/Toronto,+ON,+Canada/data=!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477?sa=X&ved=2ahUKEwihs5DvmdOCAxUyaqQEHY_gB5MQ8gF6BAgKEAA" className='flex items-center'><MapPin size={12} color='gray' className='mr-1' />{item.location}</Link></div>
                     </div>
                   </div>
                   <div className="">
-                    <h5 className='md:text-lg text-sm'>{item.description}</h5>
-                    <ul className='md:text-base text-xs list-disc px-8 bg-primaryPale py-2 rounded-md'>
+                    <h5 className='lg:text-2xl md:text-lg text-sm'>{item.description}</h5>
+                    <ul className='lg:text-xl md:text-base text-xs list-disc px-8 bg-primaryPale py-2 rounded-md'>
                       {
                         item.details.map((detail,i)=>(
                           <li key={detail} className=''>{detail}</li>
