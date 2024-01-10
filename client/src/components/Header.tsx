@@ -4,10 +4,14 @@ import Link from 'next/link'
 import React from 'react'
 import { UserType } from '../../types';
 
+import _ from 'lodash';
+
 
 export default async function Header() {
-  
-    const userInfo:Promise<UserType> =  getUserData('arashgoodarzi');
+  // Memoize the getUserData function
+  const memoizedGetUserData = _.memoize(getUserData);
+
+    const userInfo:Promise<UserType> =  memoizedGetUserData('arashgoodarzi');
     const user = await userInfo
 
   return (

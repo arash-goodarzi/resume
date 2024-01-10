@@ -6,6 +6,8 @@ import React, { ReactElement  } from 'react'
 import {ChevronRight} from 'lucide-react'
 import { UserType } from '../../types'
 
+import _ from 'lodash';
+
 const iconDictionary: {[key:string]: ReactElement} = {
     'Gem':<Gem size={25} className='text-primaryTooStrong'/>,
     'Zap':<Zap size={25} className='text-primaryTooStrong'/>,
@@ -23,7 +25,10 @@ const iconDictionary: {[key:string]: ReactElement} = {
 
 const Aside = async() => {
 
-    const userInfo:Promise<UserType> =  getUserData('arashgoodarzi');
+    // Memoize the getUserData function
+    const memoizedGetUserData = _.memoize(getUserData);
+
+    const userInfo:Promise<UserType> =  memoizedGetUserData('arashgoodarzi');
     const user = await userInfo
     // console.log({user})
   return (

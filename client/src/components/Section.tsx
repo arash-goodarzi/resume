@@ -4,9 +4,13 @@ import Link from 'next/link'
 import React from 'react'
 import { UserType } from '../../types'
 
-const Section = async() => {
+import _ from 'lodash';
 
-  const userInfo:Promise<UserType> =  getUserData('arashgoodarzi');
+const Section = async() => {
+  // Memoize the getUserData function
+  const memoizedGetUserData = _.memoize(getUserData);
+
+  const userInfo:Promise<UserType> =  memoizedGetUserData('arashgoodarzi');
   const user = await userInfo
 
   return (
@@ -32,7 +36,7 @@ const Section = async() => {
                     <h3 className=' text-primaryTooStrong xl:text-2xl xl:mt-1 md:text-xl text-base font-bold'>{item.company}</h3>
                     <div className="flex flex-row items-center">
                       <div className="flex flex-row items-center md:text-base text-xs"><CalendarDays size={12} color='gray' className='mr-1' />{item.date}</div>
-                      <div className="flex items-center text-xs ml-6"><Link href="https://www.google.com/maps/place/Toronto,+ON,+Canada/data=!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477?sa=X&ved=2ahUKEwihs5DvmdOCAxUyaqQEHY_gB5MQ8gF6BAgKEAA" className='flex items-center'><MapPin size={12} color='gray' className='mr-1' />{item.location}</Link></div>
+                      <div className="flex items-center text-xs ml-6"><Link href={`${item.locationGoogleMapLink}`} className='flex items-center'><MapPin size={12} color='gray' className='mr-1' />{item.location}</Link></div>
                     </div>
                   </div>
                   <div className="">
