@@ -12,7 +12,7 @@
     }
 
     .title-detail {
-        @apply text-xs text-secondaryStrong font-bold
+        @apply lg:text-lg md:text-base text-xs text-black font-bold
     }
 
     .title-head-main {

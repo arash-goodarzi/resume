@@ -1,3 +1,4 @@
+
 import { getUserData } from '@/lib/getUserInfo'
 import { Bug, Gem, Languages, Loader, Sparkle, Sparkles, Star, Sun, Target, TerminalSquare, ThumbsUp, Trophy, Zap } from 'lucide-react'
 import React, { ReactElement  } from 'react'
@@ -6,18 +7,18 @@ import {ChevronRight} from 'lucide-react'
 import { UserType } from '../../types'
 
 const iconDictionary: {[key:string]: ReactElement} = {
-    'Gem':<Gem size={12} className='text-primaryTooStrong'/>,
-    'Zap':<Zap size={12} className='text-primaryTooStrong'/>,
-    'Star':<Star size={12} className='text-primaryTooStrong'/>,
-    'Bug':<Bug size={12} className='text-primaryTooStrong'/>,
-    'Loader':<Loader size={12} className='text-primaryTooStrong'/>,
-    'Sparkle':<Sparkle size={12} className='text-primaryTooStrong'/>,
-    'Sparkles':<Sparkles size={12} className='text-primaryTooStrong'/>,
-    'Sun':<Sun size={12} className='text-primaryTooStrong'/>,
-    'Target':<Target size={12} className='text-primaryTooStrong'/>,
-    'TerminalSquare':<TerminalSquare size={12} className='text-primaryTooStrong'/>,
-    'ThumbsUp':<ThumbsUp size={12} className='text-primaryTooStrong'/>,
-    'Trophy':<Trophy size={12} className='text-primaryTooStrong'/>,
+    'Gem':<Gem size={25} className='text-primaryTooStrong'/>,
+    'Zap':<Zap size={25} className='text-primaryTooStrong'/>,
+    'Star':<Star size={25} className='text-primaryTooStrong'/>,
+    'Bug':<Bug size={25} className='text-primaryTooStrong'/>,
+    'Loader':<Loader size={25} className='text-primaryTooStrong'/>,
+    'Sparkle':<Sparkle size={25} className='text-primaryTooStrong'/>,
+    'Sparkles':<Sparkles size={25} className='text-primaryTooStrong'/>,
+    'Sun':<Sun size={25} className='text-primaryTooStrong'/>,
+    'Target':<Target size={25} className='text-primaryTooStrong'/>,
+    'TerminalSquare':<TerminalSquare size={25} className='text-primaryTooStrong'/>,
+    'ThumbsUp':<ThumbsUp size={25} className='text-primaryTooStrong'/>,
+    'Trophy':<Trophy size={25} className='text-primaryTooStrong'/>,
 }
 
 const Aside = async() => {
@@ -34,7 +35,7 @@ const Aside = async() => {
                 {
                     user.sidebarInfo.strengths.map((item,index)=>(
                         <div key={item.id} className="flex flex-row my-2">
-                            <div className="flex items-center mx-3">
+                            <div className="flex items-center mx-3 ">
                                 {iconDictionary[item.icon]}
                             </div>
                             <div className="flex flex-col w-full">
@@ -200,3 +201,4 @@ const Aside = async() => {
 }
 
 export default Aside
+

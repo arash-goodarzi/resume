@@ -49,7 +49,8 @@ const Section = async() => {
               ))
             }
 
-        </div>     
+        </div>  
+
         {/* EDUCATION */}
         <div className="text-neutralStrong py-3">
             <div className=" title-head-main">EDUCATION</div>
@@ -58,11 +59,11 @@ const Section = async() => {
                 <div key={item.id} className="px-2">
                   <h2 className='title-subject-main'>{item.title}</h2>
                   <div className="flex flex-row justify-between items-center">
-                    <h3 className=' text-primaryTooStrong py-2'>{item.collageName}</h3>
-                    <div className="text-sm py-2">GPA: <span className='text-primaryTooStrong font-bold'>{item.gpa}%</span> </div>
+                    <h3 className=' text-primaryTooStrong py-2 md:text-xl text-sm'>{item.collageName}</h3>
+                    <div className="py-2 md:text-xl text-sm">GPA: <span className='text-primaryTooStrong font-bold  md:text-xl text-sm'>{item.gpa}%</span> </div>
                     <div className="flex flex-row items-center py-2">
-                      <div className="flex flex-row items-center text-xs"><CalendarDays size={12} color='gray' className='mr-1' />{item.date}</div>
-                      <div className="flex items-center text-xs  ml-6"><Link href="https://www.google.com/maps/place/Toronto,+ON,+Canada/data=!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477?sa=X&ved=2ahUKEwihs5DvmdOCAxUyaqQEHY_gB5MQ8gF6BAgKEAA" className='flex items-center'><MapPin size={12} color='gray' className='mr-1' />{item.location}</Link></div>
+                      <div className="flex flex-row items-center md:text-base text-xs"><CalendarDays size={12} color='gray' className='mr-1' />{item.date}</div>
+                      <div className="flex items-center md:text-base text-xs ml-6"><Link href="https://www.google.com/maps/place/Toronto,+ON,+Canada/data=!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477?sa=X&ved=2ahUKEwihs5DvmdOCAxUyaqQEHY_gB5MQ8gF6BAgKEAA" className='flex items-center'><MapPin size={12} color='gray' className='mr-1' />{item.location}</Link></div>
                     </div>
                   </div>
                 </div>
@@ -75,19 +76,20 @@ const Section = async() => {
             <div className=" title-head-main">CERTIFICATIONS</div>
             <div className="px-2 ">
               <table className="table-auto w-full md:text-xl text-sm text-left even:bg-white even:text-black odd:bg-neutralStrong odd:text-white rounded-md">
-                <thead>
-                  <tr className=''>
+                <thead className=''>
+                  <tr className='md:h-16 h-10'>
                     <th className='pl-2'>Course</th>
-                    <th className='sm:flex hidden'>Instractor </th>
+                    {/* <th className='sm:flex hidden my-auto'>Instractor </th> */}
+                    <th className='sm:table-cell hidden'>Instractor</th>
                     <th>From</th>
                   </tr>
                 </thead>
-                <tbody className=''>
+                <tbody className=' '>
                   {
                     user.sectionInfo.certifications.map((item,index)=>(
-                      <tr key={item.id} className='even:bg-white even:text-black odd:bg-primaryTooStrong odd:text-neutralTooPale'>
-                        <td className='pl-2'>{item.course}</td>
-                        <td className='sm:flex hidden'>{item.instractor}</td>
+                      <tr key={item.id} className='md:h-16 h-10 even:bg-white even:text-black odd:bg-primaryTooStrong odd:text-neutralTooPale'>
+                        <td className='pl-2 first-letter:'>{item.course}</td>
+                        <td className='sm:table-cell hidden glex items-baseline'>{item.instractor}</td>
                         <td>{item.from}</td>
                       </tr>
                     ))
