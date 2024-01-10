@@ -181,66 +181,84 @@ function loadGeneralInfo() {
           "certifications":[
             {
               "id":1,
+              "course":"Typescript: The Complete Developer's Guide",
+              "instractor":"Stephen Grider",
+              "from":"Udemy"
+            },
+            {
+              "id":2,
+              "course":"Build Data Visualizations with D3.js & Firebase",
+              "instractor":"The Net Ninja",
+              "from":"Udemy"
+            },
+            {
+              "id":3,
+              "course":"Ultimate AWS Certified Developer Associate",
+              "instractor":"Stephane Maarek",
+              "from":"Udemy"
+            },
+            {
+              "id":4,
               "course":"Apache Kafka - Real-time Stream Processing with Java",
               "instractor":"Prashant kumar pandey",
               "from":"Udemy"
             },
             {
-              "id":2,
+              "id":5,
               "course":"Apache Spark 3 - with Scala",
               "instractor":"Prashant kumar pandey",
               "from":"Udemy"
             },
             {
-              "id":3,
+              "id":6,
               "course":"Apache Spark 3 -Real-time Stream - with Scala",
               "instractor":"Prashant kumar pandey",
               "from":"Udemy"
             },
             {
-              "id":4,
+              "id":7,
               "course":"Splunk Fundamentals Part 1 (IOD)",
               "instractor":"Multi Instructors",
               "from":"Splunk"
             },
             {
-              "id":5,
+              "id":8,
               "course":"Splunk Fundamentals Part 2 (IOD)",
               "instractor":"Multi Instructors",
               "from":"Splunk"
             },
             {
-              "id":6,
+              "id":9,
               "course":"Scala & Functional Programming for Beginners",
               "instractor":"Rock the JVM",
               "from":"Udemy"
             },
             {
-              "id":7,
+              "id":10,
               "course":"Advanced Scala and Functional Programming",
               "instractor":"Rock the JVM",
               "from":"Udemy"
             },
             {
-              "id":8,
+              "id":11,
               "course":"Hadoop with MapReduce, HDFS, Spark, Flink, Hive, Cassandra",
               "instractor":"Frank Kane",
               "from":"Udemy"
             },
             {
-              "id":9,
+              "id":12,
               "course":"MongoDB",
               "instractor":"Kirsten Hunter",
               "from":"LinkedIn-Lynda"
             },
             {
-              "id":10,
+              "id":13,
               "course":"Akka Essentials with Scala",
               "instractor":"Rock the JVM",
               "from":"Udemy"
             },
             {
-              "id":11,
+              "id":14,
               "course":"Apache Kafka Ecosystem with Java",
               "instractor":"Stephane Maarek",
               "from":"Udemy"
